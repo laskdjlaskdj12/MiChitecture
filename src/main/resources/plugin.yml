@@ -6,3 +6,5 @@ description: Tutorial!
 commands:
   make:
       useage: /<command>
+  upload:
+      useage: /<command>

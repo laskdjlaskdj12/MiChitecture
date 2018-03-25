@@ -1,4 +1,4 @@
-package com.laskdjlaskdj12.Main;
+package com.laskdjlaskdj12.Command;
 
 import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
 import com.laskdjlaskdj12.ScanBlockStruct.ScanBlockStruct;
@@ -12,10 +12,10 @@ import java.util.Vector;
 
 public class UploadBlock implements CommandExecutor {
 
-    private PlayerBlockStorageCache cache;
+    private PlayerBlockStorageCache BlockStorage;
 
     public UploadBlock(PlayerBlockStorageCache cache){
-        cache = cache;
+        BlockStorage = cache;
     }
 
     @Override
@@ -26,13 +26,15 @@ public class UploadBlock implements CommandExecutor {
 
             player.sendRawMessage("업로드중...");
 
-            Vector<ScanBlockStruct> ScanBlockList = cache.getBlock(player.getName());
+            Vector<ScanBlockStruct> ScanBlockList = BlockStorage.getBlock(player.getPlayerListName());
 
-            if(ScanBlockList.isEmpty()){
+            player.sendRawMessage("블록이 있는지 확인");
+            if(ScanBlockList == null){
                 player.sendRawMessage("지정된 블록이 없습니다.");
                 return true;
             }
 
+            player.sendRawMessage("업로드를 함");
             Upload uploadClass = new Upload();
 
             Boolean uploadReesult = uploadClass.uploadBlockInfo(ScanBlockList, sender.getName());

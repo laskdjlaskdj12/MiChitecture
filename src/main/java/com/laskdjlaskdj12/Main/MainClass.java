@@ -2,9 +2,8 @@ package com.laskdjlaskdj12.Main;
 
 import com.laskdjlaskdj12.BlockScan.BlockScan;
 import com.laskdjlaskdj12.Command.MakeCommand;
-import com.laskdjlaskdj12.Command.SaveCommand;
+import com.laskdjlaskdj12.Command.UploadBlock;
 import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
-import com.laskdjlaskdj12.UploadBlock.Upload;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MainClass extends JavaPlugin {
