@@ -1,0 +1,10 @@
+name: nojumping
+version: 1.0
+main: com.laskdjlaskdj12.Main.MainClass
+description: Tutorial!
+
+commands:
+  make:
+      useage: /<command>
+  upload:
+      useage: /<command>
