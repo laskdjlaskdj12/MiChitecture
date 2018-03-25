@@ -4,6 +4,7 @@ import com.laskdjlaskdj12.BlockScan.BlockScan;
 import com.laskdjlaskdj12.Command.MakeCommand;
 import com.laskdjlaskdj12.Command.SaveCommand;
 import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
+import com.laskdjlaskdj12.UploadBlock.Upload;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MainClass extends JavaPlugin {
@@ -17,6 +18,7 @@ public class MainClass extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new BlockScan(cache), this);
         this.getCommand("make").setExecutor(new MakeCommand(cache));
+        this.getCommand("upload").setExecutor(new UploadBlock(cache));
     }
 
     @Override
