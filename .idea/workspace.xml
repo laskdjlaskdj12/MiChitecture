@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dce53bc8-ee02-49b4-9cdc-7f25bf4af34b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/MainClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/MainClass.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/UploadBlock.java" afterPath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/UploadBlock.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/Upload.java" afterPath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/Upload.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileContent/fileContent.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/laskdjlaskdj12/BlockScan/BlockScan.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/laskdjlaskdj12/BlockScan/BlockScan.class" />
+      <change beforePath="$PROJECT_DIR$/build/libs/MiChitecture-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/build/libs/MiChitecture-1.0-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java" afterPath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -81,11 +87,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Upload.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Upload.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/Upload.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="610">
-                  <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+                <state relative-caret-position="224">
+                  <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -116,7 +122,7 @@
           <file leaf-file-name="UploadBlock.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/UploadBlock.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
+                <state relative-caret-position="80">
                   <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -127,14 +133,15 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="BlockScan.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="BlockScan.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1664">
-                  <caret line="113" column="27" lean-forward="false" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="27" />
+                <state relative-caret-position="256">
+                  <caret line="73" column="107" lean-forward="false" selection-start-line="73" selection-start-column="95" selection-end-line="73" selection-end-column="107" />
                   <folding>
                     <element signature="e#648#649#0" expanded="true" />
                     <element signature="e#689#690#0" expanded="true" />
+                    <element signature="e#1589#1606#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -165,7 +172,7 @@
           <file leaf-file-name="ScanBlockStruct.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/ScanBlockStruct/ScanBlockStruct.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="128">
+                <state relative-caret-position="112">
                   <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -585,7 +592,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/ScanBlockStruct/ScanBlockStruct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Player/PlayerBlockStorageCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/MakeCommand.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/UpLoadBlockStruct.java" />
@@ -595,6 +601,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/UploadBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/UploadBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/Upload.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java" />
       </list>
     </option>
   </component>
@@ -835,7 +842,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.MiChitecture [jar]">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -856,6 +863,24 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="MiChitecture [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     </configuration>
     <configuration name="MiChitecture [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -935,9 +960,14 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Gradle.MiChitecture [jar]" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.MiChitecture [clean]" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.MiChitecture [jar]" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Gradle.MiChitecture [clean]" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.MiChitecture [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -963,7 +993,10 @@
       <workItem from="1521373211455" duration="12919000" />
       <workItem from="1521386805108" duration="418000" />
       <workItem from="1521956987246" duration="10424000" />
-      <workItem from="1521980567587" duration="124000" />
+      <workItem from="1521980567587" duration="170000" />
+      <workItem from="1521985123488" duration="1149000" />
+      <workItem from="1521986681148" duration="1169000" />
+      <workItem from="1522076802684" duration="1005000" />
     </task>
     <task id="LOCAL-00001" summary="1. 기존 Block의 Vector를 저장을 Location 중심으로 저장하는방식을 위해 기본 저장 단위 ScanBlockStruct class 으로 변경">
       <created>1521276436000</created>
@@ -990,7 +1023,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42551000" />
+    <option name="totallyTimeSpent" value="45920000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1003,7 +1036,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="19" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1012,12 +1044,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27811736" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2891198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43154034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1025,8 +1057,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1164,6 +1196,7 @@
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#1589#1606#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1239,6 +1272,7 @@
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#1589#1606#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1294,6 +1328,7 @@
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#1589#1606#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1349,6 +1384,7 @@
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#1589#1606#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1386,6 +1422,7 @@
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#1589#1606#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1558,21 +1595,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/ScanBlockStruct/ScanBlockStruct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="112">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1664">
-          <caret line="113" column="27" lean-forward="false" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="27" />
-          <folding>
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1613,7 +1639,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/UploadBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
+        <state relative-caret-position="80">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1641,10 +1667,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/Upload.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="224">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="73" column="107" lean-forward="false" selection-start-line="73" selection-start-column="95" selection-end-line="73" selection-end-column="107" />
+          <folding>
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#1589#1606#0" expanded="true" />
           </folding>
         </state>
       </provider>

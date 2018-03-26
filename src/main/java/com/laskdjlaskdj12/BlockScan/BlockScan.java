@@ -59,7 +59,7 @@ public class BlockScan implements Listener {
                         for (double indexZ = firstLocation.getZ(); indexZ <= lastLocation.getZ(); indexZ++) {
                             for (double indexX = firstLocation.getX(); indexX <= lastLocation.getX(); indexX++) {
                                 Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
-                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(ScanBlockInfo);
+                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, firstLocation.getX(), firstLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
                                 ScanLocationList.add(ListInsertBlock);
                             }
                         }
@@ -71,7 +71,7 @@ public class BlockScan implements Listener {
                         for (double indexZ = firstLocation.getZ(); indexZ <= lastLocation.getZ(); indexZ++) {
                             for (double indexX = firstLocation.getX(); indexX >= lastLocation.getX(); indexX--) {
                                 Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
-                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(ScanBlockInfo);
+                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, lastLocation.getX(), firstLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
                                 ScanLocationList.add(ListInsertBlock);
                             }
                         }
@@ -84,7 +84,7 @@ public class BlockScan implements Listener {
                         for (double indexZ = firstLocation.getZ(); indexZ >= lastLocation.getZ(); indexZ--) {
                             for (double indexX = firstLocation.getX(); indexX <= lastLocation.getX(); indexX++) {
                                 Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
-                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(ScanBlockInfo);
+                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, firstLocation.getX(), lastLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
                                 ScanLocationList.add(ListInsertBlock);
                             }
                         }
@@ -96,8 +96,9 @@ public class BlockScan implements Listener {
                         for (double indexZ = firstLocation.getZ(); indexZ >= lastLocation.getZ(); indexZ--) {
                             for (double indexX = firstLocation.getX(); indexX >= lastLocation.getX(); indexX--) {
                                 Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
-                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(ScanBlockInfo);
-                                ScanLocationList.add(ListInsertBlock);                            }
+                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, lastLocation.getX(), lastLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
+                                ScanLocationList.add(ListInsertBlock);
+                            }
                         }
                     }
 
@@ -118,9 +119,16 @@ public class BlockScan implements Listener {
         }
     }
 
-    private ScanBlockStruct castToScanBlockStruct(Block scanBlockInfo) {
+    private ScanBlockStruct castToScanBlockStruct(World world, double firstX, double firstZ, double firstY, Block scanBlockInfo) {
+
+        double LocalX = scanBlockInfo.getX() - firstX;
+        double LocalY = scanBlockInfo.getY() - firstY;
+        double LocalZ = scanBlockInfo.getZ() - firstZ;
+
+        Location reScanLocation = new Location(world, (int) LocalX, (int) LocalY, (int) LocalZ);
+
         ScanBlockStruct ScanBlock = new ScanBlockStruct();
-        ScanBlock.BlockLocation = scanBlockInfo.getLocation();
+        ScanBlock.BlockLocation = reScanLocation;
         ScanBlock.BlockMaterial = scanBlockInfo.getType();
         return ScanBlock;
     }
