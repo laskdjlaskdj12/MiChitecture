@@ -26,18 +26,24 @@ public class BlockScan implements Listener {
     @EventHandler
     public void playerTouchArea(BlockBreakEvent event) {
 
+        //플레이어가 터치를 했을경우
         Player touchPlayer = event.getPlayer();
         World world = event.getPlayer().getWorld();
 
-
         if (touchPlayer.getInventory().getItemInMainHand().getType() == Material.WOOD_AXE) {
 
-            event.getPlayer().sendMessage("월드정보 로딩중..");
-            if (world == null) {
-                event.getPlayer().sendRawMessage("월드정보가 로딩이 안됬습니다.");
-            }
+            if(!isTouched) {
+                //첫번째 터치
 
-            event.getPlayer().sendRawMessage(world.getName());
+                event.getPlayer().sendRawMessage("첫번재 태그를 했습니다.");
+                setFirstLocation(event);
+            }
+            else{
+                //두번째 터치
+
+                event.getPlayer().sendRawMessage("두번째 태그를 했습니다.");
+                ScanBlockArea(event, touchPlayer, world);
+            }
 
             /*
             Todo 만약 터치를 한적이 있다면 첫번째 터치 장소와 마지막 터치 장소 안에 있는 모든 블록들을 스캔해서 Json함
@@ -45,78 +51,78 @@ public class BlockScan implements Listener {
             */
 
             event.setCancelled(true);
-
-            if (isTouched) {
-                event.getPlayer().sendRawMessage("두번째 태그를 했습니다.");
-                Vector<ScanBlockStruct> ScanLocationList = new Vector<ScanBlockStruct>();
-                lastLocation = event.getBlock().getLocation();
-
-                //블록 타입의 스캔 방향을 정함
-                if ((firstLocation.getX() < lastLocation.getX()) && (firstLocation.getZ() < lastLocation.getZ())) {
-
-                    //블록을 스캔함
-                    for (double indexY = firstLocation.getY(); indexY <= lastLocation.getY(); indexY++) {
-                        for (double indexZ = firstLocation.getZ(); indexZ <= lastLocation.getZ(); indexZ++) {
-                            for (double indexX = firstLocation.getX(); indexX <= lastLocation.getX(); indexX++) {
-                                Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
-                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, firstLocation.getX(), firstLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
-                                ScanLocationList.add(ListInsertBlock);
-                            }
-                        }
-                    }
-                } else if ((firstLocation.getX() > lastLocation.getX()) && (firstLocation.getZ() < lastLocation.getZ())) {
-
-                    //블록을 스캔함
-                    for (double indexY = firstLocation.getY(); indexY <= lastLocation.getY(); indexY++) {
-                        for (double indexZ = firstLocation.getZ(); indexZ <= lastLocation.getZ(); indexZ++) {
-                            for (double indexX = firstLocation.getX(); indexX >= lastLocation.getX(); indexX--) {
-                                Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
-                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, lastLocation.getX(), firstLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
-                                ScanLocationList.add(ListInsertBlock);
-                            }
-                        }
-                    }
-
-                } else if ((firstLocation.getX() < lastLocation.getX()) && (firstLocation.getZ() > lastLocation.getZ())) {
-
-                    //블록을 스캔함
-                    for (double indexY = firstLocation.getY(); indexY <= lastLocation.getY(); indexY++) {
-                        for (double indexZ = firstLocation.getZ(); indexZ >= lastLocation.getZ(); indexZ--) {
-                            for (double indexX = firstLocation.getX(); indexX <= lastLocation.getX(); indexX++) {
-                                Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
-                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, firstLocation.getX(), lastLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
-                                ScanLocationList.add(ListInsertBlock);
-                            }
-                        }
-                    }
-                } else {
-
-                    //블록을 스캔함
-                    for (double indexY = firstLocation.getY(); indexY <= lastLocation.getY(); indexY++) {
-                        for (double indexZ = firstLocation.getZ(); indexZ >= lastLocation.getZ(); indexZ--) {
-                            for (double indexX = firstLocation.getX(); indexX >= lastLocation.getX(); indexX--) {
-                                Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
-                                ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, lastLocation.getX(), lastLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
-                                ScanLocationList.add(ListInsertBlock);
-                            }
-                        }
-                    }
-
-                }
-
-                if (ScanLocationList.isEmpty()) {
-                    event.getPlayer().sendRawMessage("스캔에 실패했습니다.");
-                } else {
-                    event.getPlayer().sendRawMessage(ScanLocationList.size() + "개 스캔 완료");
-                    blockStorageCache.saveCache(touchPlayer.getPlayerListName(), ScanLocationList);
-                }
-                isTouched = false;
-            } else {
-                event.getPlayer().sendRawMessage("첫번재 태그를 했습니다.");
-                firstLocation = event.getBlock().getLocation();
-                isTouched = true;
-            }
         }
+    }
+
+    private void setFirstLocation(BlockBreakEvent event) {
+        firstLocation = event.getBlock().getLocation();
+        isTouched = true;
+    }
+
+    private void ScanBlockArea(BlockBreakEvent event, Player touchPlayer, World world) {
+        Vector<ScanBlockStruct> ScanLocationList = new Vector<ScanBlockStruct>();
+        lastLocation = event.getBlock().getLocation();
+
+        //블록 타입의 스캔 방향을 정함
+        if ((firstLocation.getX() < lastLocation.getX()) && (firstLocation.getZ() < lastLocation.getZ())) {
+
+            //블록을 스캔함
+            for (double indexY = firstLocation.getY(); indexY <= lastLocation.getY(); indexY++) {
+                for (double indexZ = firstLocation.getZ(); indexZ <= lastLocation.getZ(); indexZ++) {
+                    for (double indexX = firstLocation.getX(); indexX <= lastLocation.getX(); indexX++) {
+                        Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
+                        ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, firstLocation.getX(), firstLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
+                        ScanLocationList.add(ListInsertBlock);
+                    }
+                }
+            }
+        } else if ((firstLocation.getX() > lastLocation.getX()) && (firstLocation.getZ() < lastLocation.getZ())) {
+
+            //블록을 스캔함
+            for (double indexY = firstLocation.getY(); indexY <= lastLocation.getY(); indexY++) {
+                for (double indexZ = firstLocation.getZ(); indexZ <= lastLocation.getZ(); indexZ++) {
+                    for (double indexX = firstLocation.getX(); indexX >= lastLocation.getX(); indexX--) {
+                        Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
+                        ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, lastLocation.getX(), firstLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
+                        ScanLocationList.add(ListInsertBlock);
+                    }
+                }
+            }
+
+        } else if ((firstLocation.getX() < lastLocation.getX()) && (firstLocation.getZ() > lastLocation.getZ())) {
+
+            //블록을 스캔함
+            for (double indexY = firstLocation.getY(); indexY <= lastLocation.getY(); indexY++) {
+                for (double indexZ = firstLocation.getZ(); indexZ >= lastLocation.getZ(); indexZ--) {
+                    for (double indexX = firstLocation.getX(); indexX <= lastLocation.getX(); indexX++) {
+                        Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
+                        ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, firstLocation.getX(), lastLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
+                        ScanLocationList.add(ListInsertBlock);
+                    }
+                }
+            }
+        } else {
+
+            //블록을 스캔함
+            for (double indexY = firstLocation.getY(); indexY <= lastLocation.getY(); indexY++) {
+                for (double indexZ = firstLocation.getZ(); indexZ >= lastLocation.getZ(); indexZ--) {
+                    for (double indexX = firstLocation.getX(); indexX >= lastLocation.getX(); indexX--) {
+                        Block ScanBlockInfo = ScanBlock(event, world, indexY, indexZ, indexX);
+                        ScanBlockStruct ListInsertBlock = castToScanBlockStruct(world, lastLocation.getX(), lastLocation.getZ(), firstLocation.getY(), ScanBlockInfo);
+                        ScanLocationList.add(ListInsertBlock);
+                    }
+                }
+            }
+
+        }
+
+        if (ScanLocationList.isEmpty()) {
+            event.getPlayer().sendRawMessage("스캔에 실패했습니다.");
+        } else {
+            event.getPlayer().sendRawMessage(ScanLocationList.size() + "개 스캔 완료");
+            blockStorageCache.saveCache(touchPlayer.getPlayerListName(), ScanLocationList);
+        }
+        isTouched = false;
     }
 
     private ScanBlockStruct castToScanBlockStruct(World world, double firstX, double firstZ, double firstY, Block scanBlockInfo) {

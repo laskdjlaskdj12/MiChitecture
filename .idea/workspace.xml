@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dce53bc8-ee02-49b4-9cdc-7f25bf4af34b" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/DownloadBlock.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Player/PlayerTouchLocation.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileContent/fileContent.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" />
@@ -11,7 +13,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/laskdjlaskdj12/BlockScan/BlockScan.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/laskdjlaskdj12/BlockScan/BlockScan.class" />
       <change beforePath="$PROJECT_DIR$/build/libs/MiChitecture-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/build/libs/MiChitecture-1.0-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/plugin.yml" afterPath="$PROJECT_DIR$/out/production/resources/plugin.yml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java" afterPath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/MakeCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/MakeCommand.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/MainClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/MainClass.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -74,32 +79,20 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7754386">
+    <splitter split-orientation="horizontal" split-proportion="0.44608223">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="MakeCommand.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/MakeCommand.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="576">
-                  <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+                <state relative-caret-position="416">
+                  <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Upload.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/Upload.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
-                  <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="BlockCordinateStruct.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="BlockCordinateStruct.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/BlockCordinateStruct.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="208">
@@ -122,7 +115,7 @@
           <file leaf-file-name="UploadBlock.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/UploadBlock.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="80">
+                <state relative-caret-position="208">
                   <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -133,15 +126,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="BlockScan.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="PlayerTouchLocation.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Player/PlayerTouchLocation.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="144">
+                  <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#160#161#0" expanded="true" />
+                    <element signature="e#225#226#0" expanded="true" />
+                    <element signature="e#433#434#0" expanded="true" />
+                    <element signature="e#487#488#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BlockScan.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="256">
-                  <caret line="73" column="107" lean-forward="false" selection-start-line="73" selection-start-column="95" selection-end-line="73" selection-end-column="107" />
+                <state relative-caret-position="192">
+                  <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
                   <folding>
                     <element signature="e#648#649#0" expanded="true" />
                     <element signature="e#689#690#0" expanded="true" />
-                    <element signature="e#1589#1606#0" expanded="true" />
+                    <element signature="e#1884#1901#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -150,8 +159,8 @@
           <file leaf-file-name="BlockSave.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockSave/BlockSave.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                <state relative-caret-position="256">
+                  <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -160,9 +169,10 @@
           <file leaf-file-name="PlayerBlockStorageCache.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Player/PlayerBlockStorageCache.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="20" column="57" lean-forward="false" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+                <state relative-caret-position="64">
+                  <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
                   <folding>
+                    <element signature="e#620#621#0" expanded="true" />
                     <element signature="e#668#669#0" expanded="true" />
                   </folding>
                 </state>
@@ -172,7 +182,7 @@
           <file leaf-file-name="ScanBlockStruct.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/ScanBlockStruct/ScanBlockStruct.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
+                <state relative-caret-position="128">
                   <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -184,8 +194,8 @@
           <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/MainClass.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
-                  <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+                <state relative-caret-position="400">
+                  <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -195,12 +205,18 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/MainClass.java">
+          <file leaf-file-name="DownloadBlock.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/DownloadBlock.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-                  <folding />
+                <state relative-caret-position="624">
+                  <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#529#530#0" expanded="true" />
+                    <element signature="e#579#580#0" expanded="true" />
+                    <element signature="e#1386#1408#0" expanded="true" />
+                    <element signature="e#1631#1648#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -221,13 +237,14 @@
       <find>lastLocation</find>
       <find>ScanBlockList</find>
       <find>blockStorageCache</find>
+      <find>setFirstLocation</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Upload" />
       </map>
     </option>
     <option name="PUSH_TAGS">
@@ -592,16 +609,18 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/ScanBlockStruct/ScanBlockStruct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Player/PlayerBlockStorageCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/MakeCommand.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/UpLoadBlockStruct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/BlockCordinateStruct.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/MainClass.java" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/UploadBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/UploadBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/Upload.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/MakeCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Player/PlayerTouchLocation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/MainClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/DownloadBlock.java" />
       </list>
     </option>
   </component>
@@ -612,9 +631,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="19" />
-    <option name="width" value="1696" />
+    <option name="x" value="1897" />
+    <option name="y" value="15" />
+    <option name="width" value="1694" />
     <option name="height" value="1026" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -691,10 +710,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -817,13 +832,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
-    <property name="SearchEverywhereHistoryKey" value="javaclass&#9;ACTION&#9;NewClass&#10;open &#9;ACTION&#9;OpenFile&#10;project&#9;ACTION&#9;ActivateProjectToolWindow&#10;JavaClass&#9;ACTION&#9;NewClass&#10;package&#9;ACTION&#9;NewDir&#10;encoding&#9;ACTION&#9;ChangeFileEncodingAction&#10;JDK&#9;ACTION&#9;SwitchBootJdk" />
+    <property name="SearchEverywhereHistoryKey" value="javaclass&#9;ACTION&#9;NewClass&#10;JavaClass&#9;ACTION&#9;NewClass&#10;Javaclass&#9;ACTION&#9;NewClass&#10;plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;open &#9;ACTION&#9;OpenFile&#10;project&#9;ACTION&#9;ActivateProjectToolWindow&#10;package&#9;ACTION&#9;NewDir&#10;encoding&#9;ACTION&#9;ChangeFileEncodingAction&#10;JDK&#9;ACTION&#9;SwitchBootJdk" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.41609195" />
@@ -966,8 +985,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.MiChitecture [clean]" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.MiChitecture [jar]" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.MiChitecture [jar]" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.MiChitecture [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -996,7 +1015,20 @@
       <workItem from="1521980567587" duration="170000" />
       <workItem from="1521985123488" duration="1149000" />
       <workItem from="1521986681148" duration="1169000" />
-      <workItem from="1522076802684" duration="1005000" />
+      <workItem from="1522076802684" duration="1086000" />
+      <workItem from="1522156724931" duration="1185000" />
+      <workItem from="1522418735389" duration="1368000" />
+      <workItem from="1522582371716" duration="657000" />
+      <workItem from="1522666508742" duration="596000" />
+      <workItem from="1522744741288" duration="2735000" />
+      <workItem from="1522844331995" duration="631000" />
+      <workItem from="1522936192415" duration="4418000" />
+      <workItem from="1523033894750" duration="2701000" />
+      <workItem from="1523090840483" duration="4000" />
+      <workItem from="1523708332832" duration="417000" />
+      <workItem from="1523708777673" duration="872000" />
+      <workItem from="1524134876268" duration="666000" />
+      <workItem from="1524231423463" duration="7745000" />
     </task>
     <task id="LOCAL-00001" summary="1. 기존 Block의 Vector를 저장을 Location 중심으로 저장하는방식을 위해 기본 저장 단위 ScanBlockStruct class 으로 변경">
       <created>1521276436000</created>
@@ -1019,11 +1051,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521980653660</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1. firstLocation와 lastLocation사이의 상대적인 거리를 재 계산했음">
+      <created>1522079778097</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1522079778097</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45920000" />
+    <option name="totallyTimeSpent" value="69996000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1036,6 +1075,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="19" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1045,14 +1085,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2891198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2121027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43154034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43123668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1138,46 +1178,20 @@
     <MESSAGE value="1. 기존 Block의 Vector를 저장을 Location 중심으로 저장하는방식을 위해 기본 저장 단위 ScanBlockStruct class 으로 변경" />
     <MESSAGE value="1. 블록에서 서버로 Upload하는 커맨드 작성" />
     <MESSAGE value="1. upload후 저장한 블록의 인덱스 값이 출력" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. upload후 저장한 블록의 인덱스 값이 출력" />
+    <MESSAGE value="1. firstLocation와 lastLocation사이의 상대적인 거리를 재 계산했음" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. firstLocation와 lastLocation사이의 상대적인 거리를 재 계산했음" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/ScanBlockStruct/ScanBlockStruct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/Upload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/MakeCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="26" column="77" lean-forward="false" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1196,7 +1210,7 @@
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#1589#1606#0" expanded="true" />
+            <element signature="e#1884#1901#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1206,6 +1220,7 @@
         <state relative-caret-position="224">
           <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
+            <element signature="e#620#621#0" expanded="true" />
             <element signature="e#668#669#0" expanded="true" />
           </folding>
         </state>
@@ -1243,7 +1258,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="26" column="77" lean-forward="false" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1260,6 +1274,7 @@
         <state relative-caret-position="224">
           <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
+            <element signature="e#620#621#0" expanded="true" />
             <element signature="e#668#669#0" expanded="true" />
           </folding>
         </state>
@@ -1272,7 +1287,7 @@
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#1589#1606#0" expanded="true" />
+            <element signature="e#1884#1901#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1299,7 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="26" column="77" lean-forward="false" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1316,6 +1330,7 @@
         <state relative-caret-position="224">
           <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
+            <element signature="e#620#621#0" expanded="true" />
             <element signature="e#668#669#0" expanded="true" />
           </folding>
         </state>
@@ -1328,7 +1343,7 @@
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#1589#1606#0" expanded="true" />
+            <element signature="e#1884#1901#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1355,7 +1370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="26" column="77" lean-forward="false" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1372,6 +1386,7 @@
         <state relative-caret-position="224">
           <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
+            <element signature="e#620#621#0" expanded="true" />
             <element signature="e#668#669#0" expanded="true" />
           </folding>
         </state>
@@ -1384,7 +1399,7 @@
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#1589#1606#0" expanded="true" />
+            <element signature="e#1884#1901#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1411,7 +1426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="26" column="77" lean-forward="false" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1422,7 +1436,7 @@
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#1589#1606#0" expanded="true" />
+            <element signature="e#1884#1901#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1581,7 +1595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="29" column="73" lean-forward="false" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1589,79 +1602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/ScanBlockStruct/ScanBlockStruct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/SaveCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockSave/BlockSave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Player/PlayerBlockStorageCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="20" column="57" lean-forward="false" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-          <folding>
-            <element signature="e#668#669#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/MakeCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/UploadBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/BlockCordinateStruct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1675,14 +1615,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bukkit/bukkit/1.10-R0.1-SNAPSHOT/876e018ad60d47159c045eb81bbb0e88de1a00ec/bukkit-1.10-R0.1-SNAPSHOT-sources.jar!/org/bukkit/plugin/java/JavaPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="421" column="16" lean-forward="false" selection-start-line="421" selection-start-column="16" selection-end-line="421" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/SaveCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockSave/BlockSave.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
-          <caret line="73" column="107" lean-forward="false" selection-start-line="73" selection-start-column="95" selection-end-line="73" selection-end-column="107" />
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/MakeCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/BlockScan/BlockScan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding>
             <element signature="e#648#649#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#1589#1606#0" expanded="true" />
+            <element signature="e#1884#1901#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Player/PlayerBlockStorageCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/UploadBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Player/PlayerTouchLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#160#161#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Main/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/ScanBlockStruct/ScanBlockStruct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/UploadBlock/BlockCordinateStruct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laskdjlaskdj12/Command/DownloadBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#1386#1408#0" expanded="true" />
+            <element signature="e#1631#1648#0" expanded="true" />
           </folding>
         </state>
       </provider>
