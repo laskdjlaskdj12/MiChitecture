@@ -120,7 +120,7 @@ public class BlockScan implements Listener {
             event.getPlayer().sendRawMessage("스캔에 실패했습니다.");
         } else {
             event.getPlayer().sendRawMessage(ScanLocationList.size() + "개 스캔 완료");
-            blockStorageCache.saveCache(touchPlayer.getPlayerListName(), ScanLocationList);
+            blockStorageCache.saveCache(touchPlayer.getUniqueId().toString(), ScanLocationList);
         }
         isTouched = false;
     }

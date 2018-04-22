@@ -1,4 +1,4 @@
-package com.laskdjlaskdj12.UploadBlock;
+package com.laskdjlaskdj12.Type;
 
 import com.laskdjlaskdj12.ScanBlockStruct.ScanBlockStruct;
 
@@ -12,8 +12,12 @@ public class BlockCordinateStruct {
         MaterialName = Block.BlockMaterial.name();
     }
 
-    private double X;
-    private double Y;
-    private double Z;
-    private String MaterialName;
+    public BlockCordinateStruct(){
+
+    }
+
+    public double X;
+    public double Y;
+    public double Z;
+    public String MaterialName;
 }

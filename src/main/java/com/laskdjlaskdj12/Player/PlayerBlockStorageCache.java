@@ -14,8 +14,8 @@ public class PlayerBlockStorageCache {
         cachedBlockList = new HashMap<String, Vector<ScanBlockStruct>>();
     }
 
-    public void saveCache(String name, Vector<ScanBlockStruct> requestBlock){
-        cachedBlockList.put(name, requestBlock);
+    public void saveCache(String playerPID, Vector<ScanBlockStruct> requestBlock){
+        cachedBlockList.put(playerPID, requestBlock);
     }
 
     public Vector<ScanBlockStruct> getBlock(String name){

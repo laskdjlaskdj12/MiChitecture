@@ -26,7 +26,7 @@ public class UploadBlock implements CommandExecutor {
 
             player.sendRawMessage("업로드중...");
 
-            Vector<ScanBlockStruct> ScanBlockList = BlockStorage.getBlock(player.getPlayerListName());
+            Vector<ScanBlockStruct> ScanBlockList = BlockStorage.getBlock(player.getUniqueId().toString());
 
             player.sendRawMessage("블록이 있는지 확인");
             if(ScanBlockList == null){
@@ -37,7 +37,7 @@ public class UploadBlock implements CommandExecutor {
             player.sendRawMessage("업로드를 함");
             Upload uploadClass = new Upload();
 
-            Boolean uploadReesult = uploadClass.uploadBlockInfo(ScanBlockList, sender.getName());
+            Boolean uploadReesult = uploadClass.uploadBlockInfo(ScanBlockList, ((Player) sender).getUniqueId().toString());
 
             if(!uploadReesult){
                 player.sendRawMessage("업로드에 실패했습니다.");

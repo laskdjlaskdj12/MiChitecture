@@ -1,13 +1,11 @@
 package com.laskdjlaskdj12.UploadBlock;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.laskdjlaskdj12.ScanBlockStruct.ScanBlockStruct;
+import com.laskdjlaskdj12.Type.BlockCordinateStruct;
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 import java.io.*;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Vector;
@@ -17,7 +15,7 @@ public class Upload {
     public Upload() {
     }
 
-    public boolean uploadBlockInfo(Vector<ScanBlockStruct> Block, String PlayerName) {
+    public boolean uploadBlockInfo(Vector<ScanBlockStruct> Block, String PlayerUID) {
 
         if (Block == null) {
             System.out.println("BlockList 업로드가 실패했습니다.");
@@ -43,7 +41,7 @@ public class Upload {
             URL url = new URL("http://localhost:8080/upload");
             URLConnection conn = url.openConnection();
 
-            String Parameter = "userID=" + PlayerName + "&data=" + JsonSendData;
+            String Parameter = "userID=" + PlayerUID + "&data=" + JsonSendData;
 
             conn.setDoOutput(true);
             OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
