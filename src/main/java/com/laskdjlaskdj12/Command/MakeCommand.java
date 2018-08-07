@@ -23,11 +23,13 @@ public class MakeCommand implements CommandExecutor {
 
         if (sender instanceof Player) {
 
-            ((Player) sender).sendRawMessage("블록 제작.");
-            Vector<ScanBlockStruct> BlockList = cache.getBlock(((Player) sender).getPlayerListName());
+            Player player = (Player)sender;
+
+            player.sendRawMessage("블록 제작.");
+            Vector<ScanBlockStruct> BlockList = cache.getBlock(player.getUniqueId().toString());
 
             if (BlockList.isEmpty()) {
-                ((Player) sender).sendRawMessage("저장된 블록이 없습니다.");
+                player.sendRawMessage("저장된 블록이 없습니다.");
                 return true;
             }
 
@@ -36,7 +38,7 @@ public class MakeCommand implements CommandExecutor {
                 setLocation.getBlock().setType(block.BlockMaterial);
             }
 
-            ((Player) sender).sendRawMessage("제작완료");
+            player.sendRawMessage("제작완료");
             return true;
         }
 
