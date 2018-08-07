@@ -34,7 +34,6 @@ public class BlockScan implements Listener {
 
             if(!isTouched) {
                 //첫번째 터치
-
                 event.getPlayer().sendRawMessage("첫번재 태그를 했습니다.");
                 setFirstLocation(event);
             }
