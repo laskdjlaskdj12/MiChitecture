@@ -2,6 +2,7 @@ package com.laskdjlaskdj12.BlockScan;
 
 import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
 import com.laskdjlaskdj12.ScanBlockStruct.ScanBlockStruct;
+import com.laskdjlaskdj12.VO.PlayerBlockAreaInfoVO;
 import org.bukkit.*;
 import org.bukkit.block.*;
 import org.bukkit.entity.Player;

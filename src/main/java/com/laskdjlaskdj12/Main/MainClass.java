@@ -19,9 +19,9 @@ public class MainClass extends JavaPlugin {
         PlayerTouchLocation LastPlayerTouch = new PlayerTouchLocation();
 
         getServer().getPluginManager().registerEvents(new BlockScan(cache), this);
-        this.getCommand("make").setExecutor(new MakeCommand(cache));
-        this.getCommand("upload").setExecutor(new UploadBlock(cache));
-        this.getCommand("download").setExecutor(new DownloadBlock(cache));
+//        this.getCommand("make").setExecutor(new MakeCommand(cache));
+//        this.getCommand("upload").setExecutor(new UploadBlock(cache));
+//        this.getCommand("download").setExecutor(new DownloadBlock(cache));
 //        this.getCommand("startmakeDownloadLocation").setExecutor(new MakeBlock(cache, LastPlayerTouch));
     }
 
