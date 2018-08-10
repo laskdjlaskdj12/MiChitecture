@@ -2,7 +2,7 @@ package com.laskdjlaskdj12.Command;
 
 import com.laskdjlaskdj12.DownloadBlock.Download;
 import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
-import com.laskdjlaskdj12.ScanBlockStruct.ScanBlockStruct;
+import com.laskdjlaskdj12.VO.BlockScanVO;
 import com.laskdjlaskdj12.Type.BlockCordinateStruct;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -33,7 +33,7 @@ public class DownloadBlock implements CommandExecutor {
 
             Vector<BlockCordinateStruct> DownloadBlocks = download.RequestBlockList(RequestBlockListPid);
 
-            Vector<ScanBlockStruct> PlayerDownalodScanBlockList = ToScanBlockList(DownloadBlocks);
+            Vector<BlockScanVO> PlayerDownalodScanBlockList = ToScanBlockList(DownloadBlocks);
 
             PlayerDownloadBlockStorage.saveCache(player.getUniqueId().toString(), PlayerDownalodScanBlockList);
 
@@ -50,10 +50,10 @@ public class DownloadBlock implements CommandExecutor {
         return ReturnDownloadBlockCordinateStruct;
     }
 
-    private Vector<ScanBlockStruct> ToScanBlockList(List<BlockCordinateStruct> blocklist){
-        Vector<ScanBlockStruct> ReturnScanBlockStructList = new Vector<ScanBlockStruct>();
+    private Vector<BlockScanVO> ToScanBlockList(List<BlockCordinateStruct> blocklist){
+        Vector<BlockScanVO> returnBlockScanVOList = new Vector<BlockScanVO>();
 
-        return ReturnScanBlockStructList;
+        return returnBlockScanVOList;
     }
 
     private PlayerBlockStorageCache PlayerDownloadBlockStorage;

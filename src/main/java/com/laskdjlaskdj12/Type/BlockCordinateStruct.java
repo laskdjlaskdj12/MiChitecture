@@ -1,10 +1,10 @@
 package com.laskdjlaskdj12.Type;
 
-import com.laskdjlaskdj12.ScanBlockStruct.ScanBlockStruct;
+import com.laskdjlaskdj12.VO.BlockScanVO;
 
 public class BlockCordinateStruct {
 
-    public BlockCordinateStruct(ScanBlockStruct Block){
+    public BlockCordinateStruct(BlockScanVO Block){
 
         X = Block.BlockLocation.getX();
         Y = Block.BlockLocation.getY();

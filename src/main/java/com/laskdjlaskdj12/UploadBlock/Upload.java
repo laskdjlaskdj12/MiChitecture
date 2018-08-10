@@ -1,7 +1,7 @@
 package com.laskdjlaskdj12.UploadBlock;
 
 import com.google.gson.Gson;
-import com.laskdjlaskdj12.ScanBlockStruct.ScanBlockStruct;
+import com.laskdjlaskdj12.VO.BlockScanVO;
 import com.laskdjlaskdj12.Type.BlockCordinateStruct;
 import org.json.simple.JSONArray;
 
@@ -15,7 +15,7 @@ public class Upload {
     public Upload() {
     }
 
-    public boolean uploadBlockInfo(Vector<ScanBlockStruct> Block, String PlayerUID) {
+    public boolean uploadBlockInfo(Vector<BlockScanVO> Block, String PlayerUID) {
 
         if (Block == null) {
             System.out.println("BlockList 업로드가 실패했습니다.");
@@ -25,7 +25,7 @@ public class Upload {
 
         JSONArray BlockDataList = new JSONArray();
         Gson gson = new Gson();
-        for (ScanBlockStruct ScanBlockIterator : Block) {
+        for (BlockScanVO ScanBlockIterator : Block) {
 
             BlockCordinateStruct info = new BlockCordinateStruct(ScanBlockIterator);
 

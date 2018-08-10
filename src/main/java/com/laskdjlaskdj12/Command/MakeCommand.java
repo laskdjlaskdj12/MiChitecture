@@ -1,7 +1,7 @@
 package com.laskdjlaskdj12.Command;
 
 import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
-import com.laskdjlaskdj12.ScanBlockStruct.ScanBlockStruct;
+import com.laskdjlaskdj12.VO.BlockScanVO;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -26,14 +26,14 @@ public class MakeCommand implements CommandExecutor {
             Player player = (Player)sender;
 
             player.sendRawMessage("블록 제작.");
-            Vector<ScanBlockStruct> BlockList = cache.getBlock(player.getUniqueId().toString());
+            Vector<BlockScanVO> BlockList = cache.getBlock(player.getUniqueId().toString());
 
             if (BlockList.isEmpty()) {
                 player.sendRawMessage("저장된 블록이 없습니다.");
                 return true;
             }
 
-            for (ScanBlockStruct block : BlockList) {
+            for (BlockScanVO block : BlockList) {
                 Location setLocation = block.BlockLocation;
                 setLocation.getBlock().setType(block.BlockMaterial);
             }

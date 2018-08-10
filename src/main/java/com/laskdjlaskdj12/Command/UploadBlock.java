@@ -1,7 +1,7 @@
 package com.laskdjlaskdj12.Command;
 
 import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
-import com.laskdjlaskdj12.ScanBlockStruct.ScanBlockStruct;
+import com.laskdjlaskdj12.VO.BlockScanVO;
 import com.laskdjlaskdj12.UploadBlock.Upload;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -26,7 +26,7 @@ public class UploadBlock implements CommandExecutor {
 
             player.sendRawMessage("업로드중...");
 
-            Vector<ScanBlockStruct> ScanBlockList = BlockStorage.getBlock(player.getUniqueId().toString());
+            Vector<BlockScanVO> ScanBlockList = BlockStorage.getBlock(player.getUniqueId().toString());
 
             player.sendRawMessage("블록이 있는지 확인");
             if(ScanBlockList == null){

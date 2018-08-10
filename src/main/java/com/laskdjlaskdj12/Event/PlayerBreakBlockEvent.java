@@ -28,6 +28,7 @@ public class PlayerBreakBlockEvent implements Listener {
 
         //현재 플레이어가 나무 도끼를 가지고 있을때
         if(playerInventory.getItemInMainHand().getType() != Material.WOOD_AXE){
+
             return;
         }
 
@@ -37,7 +38,9 @@ public class PlayerBreakBlockEvent implements Listener {
             player.sendRawMessage("첫번째 블록을 터치했습니다.");
 
             //첫번재 블록은 터치했음을 알려줌
-            cache.setFirstBlock(player.getUniqueId().toString(), e.getBlock());
+            cache.setFirstBlock(player.getUniqueId().toString(), player, e.getBlock());
+
+            e.setCancelled(true);
             return;
         }
 
@@ -51,5 +54,10 @@ public class PlayerBreakBlockEvent implements Listener {
 
         //블록을 스캔함
         blockScan.scanBlock(playerBlockAreaInfoVO);
+
+        //이벤트들을 캔슬함
+        e.setCancelled(true);
+
+        return;
     }
 }
