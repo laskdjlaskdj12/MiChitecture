@@ -12,6 +12,10 @@ public class PlayerBlockStorageCache {
 
     private HashMap<String, PlayerBlockAreaInfoVO> playersBlockAreaInfo;
 
+    public PlayerBlockStorageCache() {
+        playersBlockAreaInfo = new HashMap<String, PlayerBlockAreaInfoVO>();
+    }
+
     public boolean isOneTapped(String PID) {
 
         PlayerBlockAreaInfoVO info = playersBlockAreaInfo.get(PID);
@@ -24,7 +28,7 @@ public class PlayerBlockStorageCache {
         PlayerBlockAreaInfoVO playerAreaInfo = playersBlockAreaInfo.get(PID);
 
         //만약 등록이 되어있지 않다면 등록함
-        if(playerAreaInfo == null){
+        if (playerAreaInfo == null) {
 
             playerAreaInfo = new PlayerBlockAreaInfoVO();
             playerAreaInfo.player = player;

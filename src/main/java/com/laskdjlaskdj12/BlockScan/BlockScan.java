@@ -11,24 +11,22 @@ import org.bukkit.entity.Player;
 import java.util.Vector;
 
 public class BlockScan implements Runnable {
-
     private  PlayerBlockAreaInfoVO playerBlockAreaInfoVO;
-    private PlayerBlockStorageCache blockStorageCache;
 
-    public BlockScan(PlayerBlockStorageCache cache,
-                     PlayerBlockAreaInfoVO playerBlockAreaInfoVO) {
-        this.blockStorageCache = cache;
+    public BlockScan(PlayerBlockAreaInfoVO playerBlockAreaInfoVO) {
         this.playerBlockAreaInfoVO = playerBlockAreaInfoVO;
     }
 
     @Override
     public void run(){
+        try {
+            World playerWorld = playerBlockAreaInfoVO.player.getWorld();
 
-        World playerWorld = playerBlockAreaInfoVO.player.getWorld();
-        
-        //블록을 스캔함
-        ScanBlockArea(playerBlockAreaInfoVO, playerBlockAreaInfoVO.player, playerWorld);
-
+            //블록을 스캔함
+            ScanBlockArea(playerBlockAreaInfoVO, playerBlockAreaInfoVO.player, playerWorld);
+        }catch(NullPointerException e){
+            e.printStackTrace();
+        }
     }
 
     private void ScanBlockArea(PlayerBlockAreaInfoVO blockAreaInfo, Player touchPlayer, World world) {
@@ -98,6 +96,9 @@ public class BlockScan implements Runnable {
         }
 
         blockAreaInfo.blockScanArea = blockScanList;
+
+        blockAreaInfo.firstBlock = null;
+        blockAreaInfo.lastBlock = null;
     }
 
     private BlockScanVO toScanBlock(World world, double firstX, double firstZ, double firstY, Block scanBlockInfo) {

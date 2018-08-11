@@ -1,6 +1,6 @@
 package com.laskdjlaskdj12.Event;
 
-import com.laskdjlaskdj12.BlockScan.BlockScan;
+import com.laskdjlaskdj12.EventLoop.EventLoop;
 import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
 import com.laskdjlaskdj12.VO.PlayerBlockAreaInfoVO;
 import org.bukkit.Material;
@@ -13,10 +13,12 @@ import org.bukkit.inventory.PlayerInventory;
 public class PlayerBreakBlockEvent implements Listener {
 
     private PlayerBlockStorageCache cache;
-    private BlockScan blockScan;
+    private EventLoop blockScanExecutor;
 
-    public PlayerBreakBlockEvent(PlayerBlockStorageCache cache){
+    public PlayerBreakBlockEvent(PlayerBlockStorageCache cache,
+                                 EventLoop executor){
         this.cache = cache;
+        this.blockScanExecutor = executor;
     }
 
     @EventHandler
@@ -48,12 +50,12 @@ public class PlayerBreakBlockEvent implements Listener {
         cache.setLastBlock(player.getUniqueId().toString(), e.getBlock());
 
         //멀티스레드로 블록들을 등록하는 과정을 거침
-        player.sendRawMessage("블록들을 등록하고 있습니다...");
+        player.sendRawMessage("블록들을 등록하고 있습니다... ");
 
         PlayerBlockAreaInfoVO playerBlockAreaInfoVO = cache.getBlockAreaInfo(player.getUniqueId().toString());
 
-        //블록을 스캔함
-        blockScan.scanBlock(playerBlockAreaInfoVO);
+        //블록을 스캔 Executor에 요청함
+        blockScanExecutor.scanExecute(playerBlockAreaInfoVO);
 
         //이벤트들을 캔슬함
         e.setCancelled(true);
