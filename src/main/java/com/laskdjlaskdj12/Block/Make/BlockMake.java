@@ -1,4 +1,4 @@
-package com.laskdjlaskdj12.BlockMake;
+package com.laskdjlaskdj12.Block.Make;
 
 import com.laskdjlaskdj12.VO.BlockScanVO;
 import com.laskdjlaskdj12.VO.PlayerBlockAreaInfoVO;

@@ -59,7 +59,5 @@ public class PlayerBreakBlockEvent implements Listener {
 
         //이벤트들을 캔슬함
         e.setCancelled(true);
-
-        return;
     }
 }

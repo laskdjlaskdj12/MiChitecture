@@ -1,6 +1,5 @@
-package com.laskdjlaskdj12.BlockScan;
+package com.laskdjlaskdj12.Block.Scan;
 
-import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
 import com.laskdjlaskdj12.VO.BlockScanVO;
 import com.laskdjlaskdj12.VO.PlayerBlockAreaInfoVO;
 import org.bukkit.Location;

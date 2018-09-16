@@ -8,3 +8,5 @@ commands:
       useage: /<command>
   upload:
       useage: /<command>
+  download:
+      useage: /<command>

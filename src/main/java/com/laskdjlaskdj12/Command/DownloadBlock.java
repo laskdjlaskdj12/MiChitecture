@@ -1,6 +1,6 @@
 //package com.laskdjlaskdj12.Command;
 //
-//import com.laskdjlaskdj12.DownloadBlock.Download;
+//import com.laskdjlaskdj12.Network.Download.Download;
 //import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
 //import com.laskdjlaskdj12.VO.BlockScanVO;
 //import com.laskdjlaskdj12.Type.BlockCordinateStruct;
@@ -12,9 +12,9 @@
 //import java.util.List;
 //import java.util.Vector;
 //
-//public class DownloadBlock implements CommandExecutor {
+//public class Download implements CommandExecutor {
 //
-//    public DownloadBlock(PlayerBlockStorageCache cache) {
+//    public Download(PlayerBlockStorageCache cache) {
 //        PlayerDownloadBlockStorage = cache;
 //    }
 //
