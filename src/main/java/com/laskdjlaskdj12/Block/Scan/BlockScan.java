@@ -23,6 +23,9 @@ public class BlockScan implements Runnable {
 
             //블록을 스캔함
             ScanBlockArea(playerBlockAreaInfoVO, playerBlockAreaInfoVO.player, playerWorld);
+
+            playerBlockAreaInfoVO.player.sendRawMessage("블록 등록이 완료되었습니다.");
+
         }catch(NullPointerException e){
             e.printStackTrace();
         }

@@ -18,8 +18,6 @@ public class EventLoop {
     private ExecutorService executor;
     private Plugin plugin;
 
-    private List<Future<String>> FutureList;
-
     public EventLoop(Plugin plugin) {
         this.executor = Executors.newCachedThreadPool();
         this.plugin = plugin;
@@ -50,28 +48,32 @@ public class EventLoop {
         runnable.runTask(plugin);
     }
 
-    public void uploadExecute(String BlockAreaJson, Player player) throws NullPointerException{
+    public final void uploadExecute(String BlockAreaJson, Player player) {
 
-        //BlockAreaJson이 NPE 경우
-        if(BlockAreaJson == null){
-            NullPointerException exception = new NullPointerException("BlockAreaJson is NULL");
+        try {
 
-            throw exception;
+            //BlockAreaJson이 NPE 경우
+            if (BlockAreaJson == null) {
+                NullPointerException exception = new NullPointerException("BlockAreaJson is NULL");
+
+                throw exception;
+            }
+
+            //Player가 NPE 일 경우
+            if (player == null) {
+                NullPointerException exception = new NullPointerException("player is NULL");
+
+                throw exception;
+            }
+
+            //업로드를 실행함
+            executor.execute(new Upload(BlockAreaJson, player));
+
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
-
-        //Player가 NPE 일 경우
-        if(player == null){
-            NullPointerException exception = new NullPointerException("player is NULL");
-
-            throw exception;
-        }
-
-        //업로드를 실행함
-        Future uploadFuture = executor.submit(new Upload(BlockAreaJson, player));
-
-        FutureList.add(uploadFuture);
     }
-
 
     public void shutdown() {
         executor.shutdown();

@@ -32,6 +32,8 @@ public class MainClass extends JavaPlugin {
 
     @Override
     public void onDisable(){
-        executor.shutdown();
+        if (executor != null){
+            executor.shutdown();
+        }
     }
 }

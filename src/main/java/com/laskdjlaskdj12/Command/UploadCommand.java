@@ -65,12 +65,17 @@ public class UploadCommand implements CommandExecutor {
         return true;
     }
 
-    private String getJsonBlockAreaInfo(BlockAreaInfoVO blockAreaInfoVO) {
+    private String getJsonBlockAreaInfo(BlockAreaInfoVO blockAreaInfoVO) throws IllegalArgumentException {
+
+        if (blockAreaInfoVO == null){
+            throw new IllegalArgumentException("blockAreaInfoVo is Empty");
+        }
+
         Gson gson = new Gson();
 
-        String json = gson.toJson(blockAreaInfoVO.getClass());
+        String blockAreaJson = gson.toJson(blockAreaInfoVO);
 
-        return json;
+        return blockAreaJson;
     }
 
     private BlockAreaInfoVO converToBlockAreaInfoVO(PlayerBlockAreaInfoVO savedAreaBlock) {
