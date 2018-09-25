@@ -1,4 +1,4 @@
-package com.laskdjlaskdj12.BlockSave;
+package com.laskdjlaskdj12.Block.Save;
 
 import org.bukkit.block.Block;
 

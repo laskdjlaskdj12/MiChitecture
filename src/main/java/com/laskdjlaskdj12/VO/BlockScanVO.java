@@ -1,9 +1,9 @@
-package com.laskdjlaskdj12.ScanBlockStruct;
+package com.laskdjlaskdj12.VO;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
 
-public class ScanBlockStruct {
+public class BlockScanVO {
     public Location BlockLocation;
     public Material BlockMaterial;
 }
