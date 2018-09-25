@@ -2,7 +2,7 @@ package com.laskdjlaskdj12.VO;
 
 import java.util.List;
 
-public class BlockAreaInfoVO {
+public class BlockAreaVO {
     private List<BlockInfoVO> blockInfoVO;
     private String PID;
 

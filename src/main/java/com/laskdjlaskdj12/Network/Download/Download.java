@@ -1,70 +1,63 @@
-//package com.laskdjlaskdj12.Network.Download;
-//
-//import com.google.gson.*;
-//import com.laskdjlaskdj12.Type.BlockCordinateStruct;
-//import jdk.nashorn.internal.ir.Block;
-//
-//import java.io.BufferedReader;
-//import java.io.IOException;
-//import java.io.InputStreamReader;
-//import java.io.OutputStreamWriter;
-//import java.net.URL;
-//import java.net.URLConnection;
-//import java.util.Vector;
-//
-//import static java.sql.DriverManager.println;
-//
-//public class Download {
-//
-//    public Vector<BlockCordinateStruct> RequestBlockList(String requestBlockListPid) throws Exception{
-//
-//        try {
-//            URL url = new URL("http://localhost:8080/download");
-//            URLConnection conn = url.openConnection();
-//
-//            String Parameter = "BlockListPid=" + requestBlockListPid;
-//
-//            conn.setDoOutput(true);
-//            OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-//            wr.write(Parameter);
-//            wr.flush();
-//
-//            // 블록이 저장되면 인덱스를 불러오기
-//            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-//
-//            String BlockListJsonString = null;
-//            while(in.ready()){
-//                BlockListJsonString = in.readLine();
-//            }
-//
-//            in.close();
-//            wr.close();
-//
-//            Vector<BlockCordinateStruct> returnBlockCordinateStruct = new Vector<BlockCordinateStruct>();
-//
-//            JsonParser parser = new JsonParser();
-//            JsonElement element = parser.parse(BlockListJsonString);
-//            JsonArray BlockListArray = element.getAsJsonArray();
-//
-//            for(JsonElement RecvBlockElement : BlockListArray){
-//
-//                BlockCordinateStruct BlockInfoVO = new BlockCordinateStruct();
-//
-//                BlockInfoVO.X = RecvBlockElement.getAsJsonObject().get("X").getAsDouble();
-//                BlockInfoVO.Y = RecvBlockElement.getAsJsonObject().get("Y").getAsDouble();
-//                BlockInfoVO.Z = RecvBlockElement.getAsJsonObject().get("Z").getAsDouble();
-//                BlockInfoVO.MaterialName = RecvBlockElement.getAsJsonObject().get("MaterialName").toString();
-//                returnBlockCordinateStruct.add(BlockInfoVO);
-//            }
-//
-//            return returnBlockCordinateStruct;
-//
-//        }catch(IOException e){
-//            e.printStackTrace();
-//            System.out.println(e.getMessage());
-//
-//            throw e;
-//        }
-//
-//    }
-//}
+package com.laskdjlaskdj12.Network.Download;
+
+import com.google.gson.Gson;
+import com.laskdjlaskdj12.Player.PlayerBlockStorageCache;
+import com.laskdjlaskdj12.VO.BlockAreaVO;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class Download implements Runnable{
+
+    private final String PlayerUID;
+    private final String DownloadCode;
+    private final PlayerBlockStorageCache cache;
+
+    public Download(String PlayerUID, String DownloadCode, PlayerBlockStorageCache cache){
+        this.PlayerUID = PlayerUID;
+        this.DownloadCode = DownloadCode;
+        this.cache = cache;
+    }
+
+    @Override
+    public void run() {
+
+        try {
+            URL url = new URL("http://localhost:8080/download");
+
+            String responceDonwload = requestDownload(url, DownloadCode, PlayerUID);
+
+            Gson gson = new Gson();
+
+            BlockAreaVO blockAreaVO  = gson.fromJson(responceDonwload, BlockAreaVO.class);
+
+            //만약 블록이 없다면 에러메세지를 리턴
+            if(blockAreaVO == null){
+                System.out.println("Convert From Donwload Block is NULL");
+                return;
+            }
+
+            //받아온 블록을 저장 요청하기
+            cache.saveBlockArea(PlayerUID, blockAreaVO);
+
+        } catch (MalformedURLException | UnirestException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String requestDownload(URL url, String downloadCode, String playerUID) throws RuntimeException, UnirestException {
+
+        HttpResponse<JsonNode> result = Unirest.post(url.toString())
+                .field("BlockAreaID", downloadCode)
+                .field("UserID", playerUID)
+                .asJson();
+
+        return result.getBody().toString();
+    }
+
+
+}

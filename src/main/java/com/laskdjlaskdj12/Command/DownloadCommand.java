@@ -15,54 +15,36 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UploadCommand implements CommandExecutor {
+public class DownloadCommand implements CommandExecutor{
 
-    private PlayerBlockStorageCache BlockStorage;
-    private EventLoop eventLoop;
+    private final EventLoop eventLoop;
+    private final PlayerBlockStorageCache BlockStorage;
 
-    public UploadCommand(PlayerBlockStorageCache cache, EventLoop eventLoop){
-        this.BlockStorage = cache;
+    public DownloadCommand(PlayerBlockStorageCache blockStorage, EventLoop eventLoop){
+        this.BlockStorage = blockStorage;
         this.eventLoop = eventLoop;
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        //만약 플레이어가 아닐경우
-        if(!(sender instanceof Player)){
-            sender.sendMessage("플레이어만 업로드를 할수있습니다.");
+        if (!(sender instanceof Player)){
+            sender.sendMessage("플레이어만 다운로드를 할수있습니다.");
+            return true;
         }
 
         Player player = (Player) sender;
 
-        try {
-            //블록들이 저장되어있는지 체크
-            PlayerBlockAreaInfoVO savedAreaBlock = BlockStorage.getBlockAreaInfo(player.getUniqueId().toString());
+        if(args.length < 1){
+            player.sendRawMessage("/downloads [ 다운로드 오브젝트 ID ]");
 
-            if (savedAreaBlock == null) {
-                player.sendRawMessage("블록이 저장되어있지 않습니다. ");
-                return true;
-            }
-
-            //블록 리스트 가 있는지 확인
-            if (savedAreaBlock.blockScanArea == null || savedAreaBlock.blockScanArea.isEmpty()) {
-                player.sendRawMessage("블록이 없습니다.");
-                return true;
-            }
-
-            //블록영역들을 BlockAreaInfoVO으로 변환하기
-            BlockAreaVO blockAreaVO = converToBlockAreaInfoVO(savedAreaBlock);
-
-            //블록리스트들을 Json으로 변환
-            String jsonBlockAreaInfo = getJsonBlockAreaInfo(blockAreaVO);
-
-            //업로드를 이벤트 루프에 요청을 넣기
-            eventLoop.uploadExecute(jsonBlockAreaInfo, player);
-
-        } catch(NullPointerException except){
-            except.printStackTrace();
-            player.sendRawMessage("업로드에 실패를 했습니다.");
+            return true;
         }
+
+        //다운로드를 요청함
+        player.sendRawMessage("블록 다운로드를 요청합니다.");
+
+        eventLoop.downloadExecute(player, args[0], BlockStorage);
 
         return true;
     }
@@ -105,4 +87,5 @@ public class UploadCommand implements CommandExecutor {
 
         return blockAreaVO;
     }
+
 }

@@ -1,21 +1,13 @@
 package com.laskdjlaskdj12.Network.Upload;
 
-import com.google.gson.Gson;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
 import org.bukkit.entity.Player;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class Upload implements Runnable {
 
@@ -43,40 +35,27 @@ public class Upload implements Runnable {
 
             String responseUpload = requestUpload(url, blockAreaJson, playerUID);
 
-            System.out.print(responseUpload);
+            if(responseUpload.isEmpty()){
+                System.out.println("업로드에 실패했습니다.");
+                System.out.println("에러메세지 : " + responseUpload);
+                return;
+            }
 
-        } catch (IOException | NullPointerException e) {
+            System.out.println("업로드에 성공했습니다.");
+            System.out.print("업로드 ID : " + responseUpload);
+
+        } catch (IOException | NullPointerException | UnirestException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
     }
 
-    private String requestUpload(URL url, String blockAreaJson, String playerID) throws IOException {
-        String uploadStatus;
+    private String requestUpload(URL url, String blockAreaJson, String playerID) throws UnirestException {
+        HttpResponse<String> responce = Unirest.post(url.toString())
+                .field("userID", playerID)
+                .field("data", blockAreaJson)
+                .asString();
 
-        try (CloseableHttpClient client = HttpClients.createDefault()) {
-
-            HttpPost httpPost = new HttpPost(String.valueOf(url));
-
-            List<NameValuePair> param = new ArrayList<>();
-            param.add(new BasicNameValuePair("data", blockAreaJson));
-            param.add(new BasicNameValuePair("userID", playerID));
-
-            httpPost.setEntity(new UrlEncodedFormEntity(param));
-            HttpResponse response = client.execute(httpPost);
-
-            if(response.getStatusLine().getStatusCode() != 200){
-                HashMap resultMap = new HashMap<>();
-                resultMap.put("ErrorCode", response.getStatusLine().getStatusCode());
-
-                Gson gson = new Gson();
-                uploadStatus = gson.toJson(resultMap);
-            }else{
-
-                uploadStatus = EntityUtils.toString(response.getEntity());
-            }
-        }
-
-        return uploadStatus;
+        return responce.getBody();
     }
 }
